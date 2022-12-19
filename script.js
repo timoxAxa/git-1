@@ -1,20 +1,27 @@
-// // 1
-// let list = 'alem napom d-low colaps'
-// let bbx = prompt('What is your name?')
-// if (bbx === 'alem' || bbx === 'napom' || bbx === 'd-low' || bbx === 'colaps') {
-//     console.log('welcome my brother. АССАЛЬЯМ АЛЯЙКУМ');
-// } else {
-//     console.log('go home fast. Быстро побежал БЕГОМММ');
-// }
+let name = "Alex".toLowerCase()
+let money = 10000
+let account = 7777
 
-//2
-let int = prompt('Как вас зовут?')
-let years = confirm('Вам есть 18?')
-if (int.length % 2 === 0 && years === true) {
-    console.log('chetnoe');
-    console.log(years);
+let ask = prompt("Имя?")
+
+if(ask === name) {
+    let ask2 = prompt("Номер счета?")
+    
+    if(+ask2 === account) {
+        // Сколько хочешь снять?
+        let ask3 = +prompt("$?")
+
+        if(money >= ask3) {
+            alert("OK")
+            
+            console.log('Осталось на счету: ${money - ask3}');
+            console.log('Обналичили: ${ask3}');
+        } else {
+            alert("Не хватает средства!")
+        }
+    } else {
+        alert("Bye!")
+    }
 } else {
-    console.log('nechetnoe');
-    console.log(years);
+    alert("Bye!")
 }
-
